@@ -18,7 +18,7 @@ public class Sistema {
         System.out.println("======Bem vindo ao Restaurante Mineiro======");
         System.out.println("1- Cadastrar Prato.");
         System.out.println("2- Cadastrar Ingrediente");
-        System.out.println("3-Adicionar Ingredientes aos Pratos");
+        System.out.println("3- Adicionar Ingredientes aos Pratos");
         System.out.println("4- Exibir Cardápio");
         System.out.println("5- Sair");
     }
@@ -75,8 +75,38 @@ public class Sistema {
         while (menu){
 
             menu();
-            int opcaoSelecionada = capturarDados("Digite a opção desejada")
+            int opcaoSelecionada = capturarDados("Digite a opção desejada").nextInt();
 
+            if(opcaoSelecionada == 1){
+                //Cadastrar Prato
+                PratoDoDia prato = cadastrarPrato();
+                adicionarIngredientes(prato);
+
+            }else if(opcaoSelecionada == 2){
+                //Cadastrar Ingrediente
+                Ingrediente ingrediente = cadastrarIngrediente();
+
+            }else if(opcaoSelecionada == 3){
+                //Adicionar Ingredientes aos Pratos
+
+            }else if(opcaoSelecionada == 4){
+                //Exibir Cardápio
+                System.out.println();
+            }else if(opcaoSelecionada == 5){
+                //Sair
+                menu = false;
+                System.out.println("\nObrigada, até a proxima!\n");
+
+            }else {
+                System.out.println("\nOpção digitada inválida, digite novamente!\n");
+            }
+
+            /* System.out.println("======Bem vindo ao Restaurante Mineiro======");
+        System.out.println("1- Cadastrar Prato.");
+        System.out.println("2- Cadastrar Ingrediente");
+        System.out.println("3-Adicionar Ingredientes aos Pratos");
+        System.out.println("4- Exibir Cardápio");
+        System.out.println("5- Sair");*/
         }
     }
 
