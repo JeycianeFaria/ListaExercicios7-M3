@@ -73,4 +73,13 @@ public class PratoDoDia {
         System.out.println("5- Sair");
     }
 
+    //Cadastrar Prato
+    public static PratoDoDia cadastrarPrato() {
+        String nome = capturarDados("Digite o nome do Prato: ").nextLine();
+        double valor = capturarDados("Digite o valor do do prato: ").nextDouble();
+
+        PratoDoDia prato = new PratoDoDia(nome, valor);
+        return prato;
+    }
+
 }
