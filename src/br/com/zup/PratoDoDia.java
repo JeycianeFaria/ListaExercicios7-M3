@@ -1,5 +1,6 @@
 package br.com.zup;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class PratoDoDia {
@@ -7,7 +8,7 @@ public class PratoDoDia {
     //Atributos
     private String nomeDoPrato;
     private  double valorDoPrato;
-    //Lista de Ingredientes
+    private List<Ingrediente> ingredientes = new ArrayList<>();
 
 
     //Construtor
@@ -35,6 +36,20 @@ public class PratoDoDia {
 
     public void setValorDoPrato(double valorDoPrato) {
         this.valorDoPrato = valorDoPrato;
+    }
+
+
+    //Métodos
+    //Adicionar ingrediente a Lista de ingredientes
+    public void adicionarIngrediente(Ingrediente ingrediente){
+        ingredientes.add(ingrediente);
+    }
+
+    //exibir lista de ingredientes
+    public void exibirLista(){
+        for (Ingrediente exibicao:ingredientes) {
+            System.out.println(exibicao);
+        }
     }
 
 }
