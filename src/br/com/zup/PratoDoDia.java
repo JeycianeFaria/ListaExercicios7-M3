@@ -59,6 +59,7 @@ public class PratoDoDia {
         retorno.append("\nNome Prato: " + nomeDoPrato);
         retorno.append("\nValor: R$" + valorDoPrato);
         retorno.append("\nIngredientes: " + ingredientes);
+        retorno.append("\n");
         return retorno.toString();
     }
 
