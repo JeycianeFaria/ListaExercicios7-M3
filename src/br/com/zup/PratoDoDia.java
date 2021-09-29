@@ -56,7 +56,7 @@ public class PratoDoDia {
     @Override
     public String toString() {
         StringBuilder retorno =  new StringBuilder();
-        retorno.append("======Restaurante Mineiro======");
+        retorno.append("======Cadárpio======");
         retorno.append("\nNome Prato: " + nomeDoPrato);
         retorno.append("\nValor: R$" + valorDoPrato);
         retorno.append("\nIngredientes: " + ingredientes);
