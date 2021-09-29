@@ -47,9 +47,19 @@ public class PratoDoDia {
 
     //exibir lista de ingredientes
     public void exibirLista(){
-        for (Ingrediente exibicao:ingredientes) {
-            System.out.println(exibicao);
+        for (Ingrediente referencia:ingredientes) {
+            System.out.println(referencia);
         }
     }
 
+    //Sobreescrevendo método toString()
+    @Override
+    public String toString() {
+        StringBuilder retorno =  new StringBuilder();
+        retorno.append("======Restaurante Mineiro======");
+        retorno.append("\nNome Prato: " + nomeDoPrato);
+        retorno.append("\nValor: R$" + valorDoPrato);
+        retorno.append("\nIngredientes: " + ingredientes);
+        return retorno.toString();
+    }
 }

@@ -24,4 +24,13 @@ public class Ingrediente {
         this.nomeIngrediente = nomeIngrediente;
     }
 
+
+    //Métodos
+    //Sobrescrevendo o toString()
+    @Override
+    public String toString() {
+        StringBuilder retorno = new StringBuilder();
+        retorno.append(nomeIngrediente);
+        return retorno.toString();
+    }
 }
